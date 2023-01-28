@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.Table
-
 @Entity
 @Table(name="detail")
 class Detail {
@@ -15,10 +14,9 @@ class Detail {
     @Id
     @Column(updatable = false)
     var id: Long? = null
-    var quantity:Long? = null
+    var quantity:Int? = null
     @Column(name="invoice_id")
     var invoiceId:Long? = null
-
     @Column(name="product_id")
     var productId:Long? = null
 

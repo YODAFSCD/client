@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
+import javax.persistence.Id
 
 
 @Service
@@ -20,9 +21,10 @@ class InvoiceService {
     fun list ():List<Invoice>{
         return invoiceRepository.findAll()
     }
-    fun listTotalMoreThan(total:Double?): List<Invoice>? {
+    fun listTotalMoreThan(total:Double?): Invoice? {
         return invoiceRepository.findTotalMoreThan(total)
     }
+
     fun save (invoice: Invoice):Invoice{
         try{
             clientRepository.findById(invoice.clientId)

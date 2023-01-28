@@ -32,6 +32,8 @@ class InvoiceController {
     fun listTotals (@PathVariable("total") total: Double ):ResponseEntity<*>{
         return ResponseEntity(invoiceService.listTotalMoreThan(total), HttpStatus.OK)
     }
+
+
     @PostMapping
     fun save(@RequestBody invoice: Invoice): Invoice?{
         return invoiceService.save(invoice)

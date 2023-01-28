@@ -1,8 +1,8 @@
 package com.example.client.controller
 
-import com.example.client.model.Invoice
+
 import com.example.client.model.Product
-import com.example.client.service.InvoiceService
+
 import com.example.client.service.ProductService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
@@ -39,8 +39,10 @@ class ProductController {
         return ResponseEntity(productService.update(product), HttpStatus.ACCEPTED)
     }
 
+
+
     @PatchMapping
-    fun updateTotal(@RequestBody product: Product): ResponseEntity<Product> {
+    fun listById(@RequestBody product: Product): ResponseEntity<Product> {
         return ResponseEntity(productService.updateTotal(product), HttpStatus.ACCEPTED)
     }
 

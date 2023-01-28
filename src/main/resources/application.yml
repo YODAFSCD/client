@@ -2,7 +2,7 @@ server:
   port: 8082
   error:
     include-message: always
-  #Configuracion de spring
+#Configuracion de spring
 spring:
   #Configuracion de migracion
   flyway:
