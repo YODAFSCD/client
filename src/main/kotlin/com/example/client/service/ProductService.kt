@@ -24,9 +24,9 @@ class ProductService {
                 ?: throw Exception("descricion no debe ser vacio")
           product.description?.takeIf {validatePlate(it)}
              ?: throw Exception("1Error de placa")
-            product.description?.takeIf {sizePlate(it)}
+            product.description?.takeIf {savePlace(it)}
                 ?: throw Exception("2Error de placa")
-            product.description?.takeIf {dashSeparate(it)}
+            product.description?.takeIf {saveGuion(it)}
                 ?: throw Exception("3Error de placa")
 
             return productRepository.save(product)
@@ -69,12 +69,12 @@ class ProductService {
 
         return true
     }
-    fun sizePlate(plate: String):Boolean{
+    fun savePlace(plate: String):Boolean{
         val tama = 8
         val  pla = plate.length
         return pla == tama
     }
-    fun dashSeparate(plate: String):Boolean{
+    fun saveGuion(plate: String):Boolean{
         val guion = "-"
         return plate.substring(3,4) == guion
     }
