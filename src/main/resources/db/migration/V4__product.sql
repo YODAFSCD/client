@@ -3,5 +3,7 @@ CREATE TABLE IF NOT EXISTS product(
     description VARCHAR (100),
     brand VARCHAR (100),
     stock INT,
-    PRIMARY KEY(id)
+    category_id INT,
+    PRIMARY KEY(id),
+    FOREIGN KEY(category_id) REFERENCES category(id)
     );
