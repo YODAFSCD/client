@@ -9,8 +9,8 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name="invoice_view")
-class InvoiceView {
+@Table(name="product_view")
+class ProductView {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-@RequestMapping("/invoice")
+@RequestMapping("/invoices")
 class InvoiceController {
 
     @Autowired

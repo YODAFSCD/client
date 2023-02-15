@@ -7,8 +7,8 @@ import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.Table
 @Entity
-@Table(name="detail")
-class Detail {
+@Table(name="detail_view")
+class DetailView {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

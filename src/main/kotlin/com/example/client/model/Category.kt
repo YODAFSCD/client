@@ -7,15 +7,13 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name="client")
-class Client {
+@Table(name="category")
+class Category {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(updatable = false)
     var id: Long? = null
-    var nui:String? = null
-    var fullname:String? = null
-    var address:String? = null
+    var description:String? = null
 
 }

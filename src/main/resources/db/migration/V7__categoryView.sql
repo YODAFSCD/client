@@ -1,10 +1,7 @@
-CREATE VIEW invoice_view AS
+CREATE VIEW detail_view AS
 
-SELECT i.*,c.fullname client
-FROM invoice i JOIN client c ON i.client_id = c.id
-
-
-
+SELECT d.*,p.description product
+FROM detail d JOIN product p ON d.product_id = p.id;
 
 
 

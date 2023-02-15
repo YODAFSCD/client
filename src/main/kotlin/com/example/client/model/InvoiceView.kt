@@ -1,6 +1,5 @@
 package com.example.client.model
 
-import java.text.DecimalFormat
 import java.util.Date
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -10,8 +9,8 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name="invoice")
-class Invoice {
+@Table(name="invoice_view")
+class InvoiceView {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
